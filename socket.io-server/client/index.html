@@ -1,0 +1,12 @@
+<script src="./socket.io.js"></script>
+<script>
+  var socket = io( 'http://' = location.hash.trim( '#' ) );
+  socket.on('connect', function () {
+    socket.send( 'Hello!' );
+
+    socket.on('message', function ( message ) {
+      console.log( 'Received: ', message );
+    });
+
+  });
+</script>
