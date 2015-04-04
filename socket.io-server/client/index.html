@@ -1,6 +1,6 @@
 <script src="./socket.io.js"></script>
 <script>
-  var socket = io( 'http://' = location.hash.trim( '#' ) );
+  var socket = io( 'http://' + location.hash.trim( '#' ) );
   socket.on('connect', function () {
     socket.send( 'Hello!' );
 
