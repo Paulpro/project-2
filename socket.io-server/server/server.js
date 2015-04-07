@@ -4,6 +4,8 @@ io.on( 'connection', function ( socket ) {
 
   socket.on( 'message', function ( message ) {
     console.log( 'Received: ', message );
+
+    socket.send( 'Reply: ' + message );
   } );
 
   socket.on( 'disconnect', function ( ) {
